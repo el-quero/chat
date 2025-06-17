@@ -18,12 +18,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // 🔌 Koneksi ke MySQL
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "", // ubah jika punya password
-  database: "chatdb",
-});
+const mysql = require("mysql2");
+const db = mysql.createConnection(process.env.DATABASE_URL);
+
 
 db.connect((err) => {
   if (err) {
