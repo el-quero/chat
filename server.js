@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const http = require("http");
-const mysql = require("mysql2");
+
 const socketIo = require("socket.io");
 const bcrypt = require("bcrypt");
 const onlineUsers = new Set();
