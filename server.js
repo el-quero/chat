@@ -319,6 +319,10 @@ app.post("/delete-member", (req, res) => {
   );
 });
 
+app.get("/", (req, res) => {
+  res.send("Chatroom aktif! 🚀");
+});
+
 // 🟢 Jalankan server
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
