@@ -323,6 +323,6 @@ app.post("/delete-member", (req, res) => {
 });
 
 // 🟢 Jalankan server
-server.listen(PORT, "localhost", () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
