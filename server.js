@@ -179,6 +179,7 @@ io.on("connection", (socket) => {
   console.log("User connected");
 
   socket.on("newuser", (name) => {
+    socket.username = name;
     sendOldMessages(socket, name);
     onlineUsers.add(name);
     userSockets.set(socket.id, name);
@@ -187,6 +188,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("userlogin", (name) => {
+    socket.username = name;
     sendOldMessages(socket, name);
     onlineUsers.add(name);
     userSockets.set(socket.id, name);
