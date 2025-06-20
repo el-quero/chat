@@ -176,7 +176,6 @@ app.get("/members", (req, res) => {
 
 // 🔌 Socket.IO
 io.on("connection", (socket) => {
-  console.log("User connected");
 
   socket.on("newuser", (name) => {
     socket.username = name;
